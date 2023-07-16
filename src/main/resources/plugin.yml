@@ -1,0 +1,16 @@
+name: LoremIpsum
+version: '${project.version}'
+main: com.unipi.alexandris.minecraftplugintemplate.loremipsum.LoremIpsum
+api-version: 1.18
+authors: [ Antitonius ]
+description: Donec eget magna venenatis, pulvinar magna sed, faucibus augue.
+website: https://anthonyal.github.io
+commands:
+  lorem:
+    description: Command group for LoremIpsum.
+    aliases: lo
+    permission: lorem
+permissions:
+  lorem:
+    description: Access to all LoremIpsum commands.
+    default: op
