@@ -1,16 +1,16 @@
-name: LoremIpsum
+name: IntelligentAntagonist
 version: '${project.version}'
-main: com.unipi.alexandris.minecraftplugintemplate.loremipsum.LoremIpsum
-api-version: 1.18
+main: com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.IntelligentAntagonist
+api-version: 1.20
 authors: [ Antitonius ]
-description: Donec eget magna venenatis, pulvinar magna sed, faucibus augue.
+description: A whole unique non-playable character AI in a single plugin!
 website: https://anthonyal.github.io
 commands:
-  lorem:
-    description: Command group for LoremIpsum.
-    aliases: lo
-    permission: lorem
+  intelligentantagonist:
+    description: Command group for IntelligentAntagonist.
+    aliases: ia
+    permission: intelligentantagonist.admin
 permissions:
-  lorem:
-    description: Access to all LoremIpsum commands.
+  intelligentantagonist.admin:
+    description: Access to all IntelligentAntagonist commands.
     default: op

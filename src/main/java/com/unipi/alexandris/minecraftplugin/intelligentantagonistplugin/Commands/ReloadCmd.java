@@ -1,23 +1,27 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Commands;
+package com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Commands;
 
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.LoremIpsum;
-import com.unipi.alexandris.minecraftplugintemplate.loremipsum.Handlers.ConfigHandler;
+import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Handlers.ConfigHandler;
+import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.IntelligentAntagonist;
 import org.bukkit.command.CommandSender;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class ReloadCmd implements SubCommand{
 
-    private final LoremIpsum plugin;
+    private final IntelligentAntagonist plugin;
 
-    public ReloadCmd(LoremIpsum plugin) {
+    private final String prefix;
+
+    public ReloadCmd(IntelligentAntagonist plugin, String prefix) {
         this.plugin = plugin;
+        this.prefix = prefix;
     }
 
     @Override
     public boolean onCommand(CommandSender sender, String[] args) {
-        sender.sendMessage("Reloading Lorem ipsum.. .  . ");
+        sender.sendMessage(prefix + "Reloading Intelligent Antagonist.. .  . ");
         plugin.reloadConfig();
         plugin.config = new ConfigHandler(plugin);
         return true;
@@ -36,5 +40,10 @@ public class ReloadCmd implements SubCommand{
     @Override
     public String getDescription() {
         return "Reloads the config.yml for the plugin.";
+    }
+
+    @Override
+    public List<String> getSubCommands() {
+        return new ArrayList<>();
     }
 }

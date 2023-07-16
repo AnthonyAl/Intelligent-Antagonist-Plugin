@@ -1,8 +1,9 @@
-package com.unipi.alexandris.minecraftplugintemplate.loremipsum.Commands;
+package com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Commands;
 
 
 import org.bukkit.command.CommandSender;
 
+import java.util.HashMap;
 import java.util.List;
 
 @SuppressWarnings("unused")
@@ -19,4 +20,6 @@ public interface SubCommand {
     default boolean inGameOnly() {
         return false;
     }
+
+    List<String> getSubCommands();
 }
