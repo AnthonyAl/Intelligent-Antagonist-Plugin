@@ -2,13 +2,13 @@ package com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Core;
 
 public class Config {
 
-    private boolean lorem;
+    private boolean auto_load;
 
-    public boolean isLorem() {
-        return lorem;
+    public boolean isAuto_load() {
+        return auto_load;
     }
 
-    public void setLorem(boolean lorem) {
-        this.lorem = lorem;
+    public void setAuto_load(boolean auto_load) {
+        this.auto_load = auto_load;
     }
 }

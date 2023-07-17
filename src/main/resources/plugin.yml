@@ -5,6 +5,10 @@ api-version: 1.20
 authors: [ Antitonius ]
 description: A whole unique non-playable character AI in a single plugin!
 website: https://anthonyal.github.io
+load: POSTWORLD
+depend:
+  - MythicMobs
+  - ModelEngine
 commands:
   intelligentantagonist:
     description: Command group for IntelligentAntagonist.

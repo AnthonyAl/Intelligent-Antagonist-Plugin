@@ -1,2 +1,2 @@
-#Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-lorem: True
+#Automatically load resources directly to MythicMobs and ModelEngine data folders
+auto-load: True

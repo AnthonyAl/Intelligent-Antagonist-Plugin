@@ -15,10 +15,10 @@ public final class ConfigHandler {
         this.plugin = plugin;
         FileConfiguration fileConfiguration = plugin.getConfig();
 
-        config.setLorem(fileConfiguration.getBoolean("lorem"));
+        config.setAuto_load(fileConfiguration.getBoolean("auto-load"));
     }
 
-    public boolean isLorem() {
-        return config.isLorem();
+    public boolean isAuto_load() {
+        return config.isAuto_load();
     }
 }

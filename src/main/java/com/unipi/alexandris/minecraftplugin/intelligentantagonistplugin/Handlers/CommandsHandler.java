@@ -1,7 +1,9 @@
 package com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Handlers;
 
 import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Commands.HelpCmd;
+import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Commands.MobsCmd;
 import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Commands.ReloadCmd;
+import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Core.Mobs.Mobs;
 import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.IntelligentAntagonist;
 import com.unipi.alexandris.minecraftplugin.intelligentantagonistplugin.Commands.SubCommand;
 import org.bukkit.*;
@@ -26,6 +28,7 @@ public final class CommandsHandler implements TabExecutor {
         this.plugin = plugin;
         commands.put("help", new HelpCmd(this, prefix));
         commands.put("reload", new ReloadCmd(plugin, prefix));
+        commands.put("mobs", new MobsCmd(plugin, prefix));
     }
 
     @Override
@@ -84,6 +87,12 @@ public final class CommandsHandler implements TabExecutor {
         }
         else if(args.length == 2) {
             StringUtil.copyPartialMatches(args[1], commands, completions);
+        }
+        else if(args.length == 3 && !Objects.equals(args[2], "killall")) {
+            commands = new ArrayList<>();
+            for(Mobs mobType : Mobs.values())
+                commands.add(mobType.name());
+            StringUtil.copyPartialMatches(args[2], commands, completions);
         }
 
         //sort the list
